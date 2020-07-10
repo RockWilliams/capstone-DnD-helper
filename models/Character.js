@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 const characterSchema = new mongoose.Schema({
 	name: { type: String, required: true },
 	class: { type: String, required: true },
+	race: { type: String, required: true },
 	level: { type: Number, required: true },
 	alignment: { type: String, required: true },
 	armorClass: { type: Number, required: true },
-	health: { type: String, required: true },
+	health: { type: Number, required: true },
 	hitDie: { type: String, required: true },
-	proficiencyBonus: { type: String, required: true },
+	proficiencyBonus: { type: Number, required: true },
 	speed: { type: Number, required: true },
 	intitiative: { type: String, required: true },
 	abilityScore: [
