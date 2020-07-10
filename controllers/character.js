@@ -79,4 +79,20 @@ router.put("/:id", function (req, res) {
 	);
 });
 
+// delete
+router.delete("/:id", async function (req, res) {
+	try {
+		const deletedCharacter = await db.Character.findByIdAndDelete(
+			req.params.id
+		);
+		const deletedItems = await db.Character.remove({
+			character: deletedCharacter._id,
+		});
+		res.redirect("/characters");
+	} catch (err) {
+		console.log(err);
+		res.send({ message: "Internal Server Error" });
+	}
+});
+
 module.exports = router;

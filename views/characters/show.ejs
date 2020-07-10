@@ -19,9 +19,17 @@
 					| Race: <%= character.race %> | Level: <%= character.level
 					%> | Alignment: <%= character.alignment %>
 					<span>
-						<a href="/characters/<%= character._id %>/edit "
-							>Edit</a
-						>
+						<a href="/characters/<%= character._id %>/edit ">
+							Edit
+						</a>
+						<span>
+							<form
+								action="/characters/<%= character._id%>?_method=DELETE"
+								method="POST"
+							>
+								<input type="submit" value="Delete" />
+							</form>
+						</span>
 					</span>
 				</h2>
 				<h3>
