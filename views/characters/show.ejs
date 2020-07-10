@@ -18,6 +18,11 @@
 					Name: <%= character.name %> | Class: <%= character.class %>
 					| Race: <%= character.race %> | Level: <%= character.level
 					%> | Alignment: <%= character.alignment %>
+					<span>
+						<a href="/characters/<%= character._id %>/edit "
+							>Edit</a
+						>
+					</span>
 				</h2>
 				<h3>
 					AC: <%= character.armorClass %> | HP: <%= character.health

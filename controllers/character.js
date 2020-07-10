@@ -49,4 +49,34 @@ router.get("/:id", function (req, res) {
 	});
 });
 
+// edit
+router.get("/:id/edit", function (req, res) {
+	db.Character.findById(req.params.id, function (err, foundCharacter) {
+		if (err) {
+			console.log(err);
+			res.send({ message: "Internal Server error." });
+		} else {
+			const context = { character: foundCharacter };
+			res.render("characters/edit", context);
+		}
+	});
+});
+
+// update
+router.put("/:id", function (req, res) {
+	db.Character.findByIdAndUpdate(
+		req.params.id,
+		req.body,
+		{ new: true },
+		function (err, updatedCharacter) {
+			if (err) {
+				console.log(err);
+				res.send({ message: "Internal Server Error" });
+			} else {
+				res.redirect(`/characters/${updatedCharacter._id}`);
+			}
+		}
+	);
+});
+
 module.exports = router;

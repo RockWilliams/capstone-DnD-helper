@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New Character</title>
+	</head>
+	<body>
+		<main class="new-character">
+			<form
+				action="/characters/<%= character._id %>?_method=PUT"
+				class="new-character-form"
+				method="POST"
+			>
+				<input
+					type="text"
+					name="name"
+					placeholder="Name"
+					value="<%= character.name %>"
+				/>
+				<input
+					type="text"
+					name="class"
+					placeholder="Class"
+					value="<%= character.class %>"
+				/>
+				<input
+					type="text"
+					name="race"
+					placeholder="Race"
+					value="<%= character.race %>"
+				/>
+				<input
+					type="text"
+					name="level"
+					placeholder="Level"
+					value="<%= character.level %>"
+				/>
+				<input
+					type="text"
+					name="alignment"
+					placeholder="Alignment"
+					value="<%= character.alignment %>"
+				/>
+				<input
+					type="text"
+					name="armorClass"
+					placeholder="Armor Class"
+					value="<%= character.armorClass %>"
+				/>
+				<input
+					type="text"
+					name="health"
+					placeholder="Total Health"
+					value="<%= character.health %>"
+				/>
+				<input
+					type="text"
+					name="hitDie"
+					placeholder="Hit Die"
+					value="<%= character.hitDie %>"
+				/>
+				<input
+					type="text"
+					name="proficiencyBonus"
+					placeholder="Proficiency Bonus"
+					value="<%= character.proficiencyBonus %>"
+				/>
+				<input
+					type="text"
+					name="speed"
+					placeholder="Speed"
+					value="<%= character.speed %>"
+				/>
+				<input
+					type="text"
+					name="initiative"
+					placeholder="Initiative"
+					value="<%= character.initiative %>"
+				/>
+				<input
+					type="text"
+					name="strength"
+					placeholder="Strength"
+					value="<%= character.strength %>"
+				/>
+				<input
+					type="text"
+					name="dexterity"
+					placeholder="Dexterity"
+					value="<%= character.dexterity %>"
+				/>
+				<input
+					type="text"
+					name="constitution"
+					placeholder="Constitution"
+					value="<%= character.constitution %>"
+				/>
+				<input
+					type="text"
+					name="intelligence"
+					placeholder="Intelligence"
+					value="<%= character.intelligence %>"
+				/>
+				<input
+					type="text"
+					name="wisdom"
+					placeholder="Wisdom"
+					value="<%= character.wisdom %>"
+				/>
+				<input
+					type="text"
+					name="charisma"
+					placeholder="Charisma"
+					value="<%= character.charisma %>"
+				/>
+				<input
+					type="text"
+					name="copper"
+					placeholder="Copper"
+					value="<%= character.copper %>"
+				/>
+				<input
+					type="text"
+					name="silver"
+					placeholder="Silver"
+					value="<%= character.silver %>"
+				/>
+				<input
+					type="text"
+					name="electrum"
+					placeholder="Electrum"
+					value="<%= character.electrum %>"
+				/>
+				<input
+					type="text"
+					name="gold"
+					placeholder="Gold"
+					value="<%= character.gold %>"
+				/>
+				<input
+					type="text"
+					name="platinum"
+					placeholder="Platinum"
+					value="<%= character.platinum %>"
+				/>
+				<input
+					type="text"
+					name="languages"
+					placeholder="Languages"
+					value="<%= character.languages %>"
+				/>
+				<input
+					type="text"
+					name="proficiencies"
+					placeholder="Proficiencies"
+					value="<%= character.proficiencies %>"
+				/>
+				<input
+					type="text"
+					name="abilities"
+					placeholder="Abilities"
+					value="<%= character.abilities %>"
+				/>
+				<input
+					type="text"
+					name="traits"
+					placeholder="Traits"
+					value="<%= character.traits %>"
+				/>
+				<input id="add-character" type="submit" value="Add Character" />
+			</form>
+		</main>
+	</body>
+</html>
