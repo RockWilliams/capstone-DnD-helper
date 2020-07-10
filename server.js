@@ -2,6 +2,7 @@
 const express = require("express");
 
 /* Internal Modules */
+const controllers = require("./controllers");
 
 /* Instanced Modules */
 const app = express();
