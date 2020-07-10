@@ -19,6 +19,23 @@ router.get("/", function (req, res) {
 	});
 });
 
+// new
+router.get("/new", function (req, res) {
+	res.render("characters/new");
+});
+
+// create
+router.post("/", function (req, res) {
+	db.Character.create(req.body, function (err, createdCharacter) {
+		if (err) {
+			console.log(err);
+			res.send({ message: "Internal Server Error" });
+		} else {
+			res.redirect(`/characters/${createdCharacter._id}`);
+		}
+	});
+});
+
 // show
 router.get("/:id", function (req, res) {
 	db.Character.findById(req.params.id, function (err, foundCharacter) {

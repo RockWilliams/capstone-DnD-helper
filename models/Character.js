@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Item = require("./Item");
 
 const characterSchema = new mongoose.Schema({
 	name: { type: String, required: true },

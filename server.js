@@ -1,5 +1,7 @@
 /* External Modules */
 const express = require("express");
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 
 /* Internal Modules */
 const controllers = require("./controllers");
@@ -14,6 +16,8 @@ const PORT = process.env.PORT || 4000;
 app.set("view engine", "ejs");
 
 /* Middleware */
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride("_method"));
 
 /* Session config */
 

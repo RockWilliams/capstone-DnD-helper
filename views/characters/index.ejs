@@ -7,7 +7,10 @@
 		<title>All Characters</title>
 	</head>
 	<body>
-		<h1>Player Creations:</h1>
+		<h1>
+			Player Creations:
+			<span><a href="/characters/new">New Character</a></span>
+		</h1>
 		<% characters.forEach(character => { %>
 		<a href="/characters/<%= character._id %>" class="character-link">
 			<div class="card character-card">

@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<h1>Character show</h1>
-		<div class="character-sheet">
+		<main class="character-sheet">
 			<header>
 				<h2>
 					Name: <%= character.name %> | Class: <%= character.class %>
@@ -26,7 +26,7 @@
 					character.speed %> | Initiative: <%= character.initiative %>
 				</h3>
 			</header>
-			<div class="main-content">
+			<div class="stats">
 				<h3>
 					Str: <%= character.strength %> | Dex: <%=
 					character.dexterity %> | Con: <%= character.constitution %>
@@ -34,6 +34,32 @@
 					character.wisdom %> | Cha: <%= character.charisma %>
 				</h3>
 			</div>
-		</div>
+			<div class="money">
+				CP: <%= character.copper %> | SP: <%= character.silver %> | EP:
+				<%= character.electrum %> | GP: <%= character.gold %> | PP: <%=
+				character.platinum %> |
+			</div>
+			<div class="items">
+				<h3>
+					Items Weight(lb) <span><button>+</button></span>
+				</h3>
+			</div>
+			<div class="abilities">
+				<h3>Abilities:</h3>
+				<p><%= character.abilities %></p>
+			</div>
+			<div class="proficiencies">
+				<h3>Proficiencies:</h3>
+				<p><%= character.proficiencies %></p>
+			</div>
+			<div class="traits">
+				<h3>Traits:</h3>
+				<p><%= character.traits %></p>
+			</div>
+			<div class="languages">
+				<h3>Languages:</h3>
+				<p><%= character.languages %></p>
+			</div>
+		</main>
 	</body>
 </html>
