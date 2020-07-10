@@ -17,11 +17,18 @@ app.set("view engine", "ejs");
 
 /* Session config */
 
+/* serve public */
+app.use(express.static(__dirname + "/public"));
+
 /* root routes */
 app.get("/", function (req, res) {
 	res.render("index");
 });
+
 /* auth routes */
+
+// character routes
+app.use("/characters", controllers.character);
 
 /* Bind Server to Port */
 app.listen(PORT, function () {

@@ -1,0 +1,14 @@
+body {
+	position: absolute;
+	background-color: lightcyan;
+	justify-content: center;
+	display: flexbox;
+}
+
+.character-sheet {
+	background-color: whitesmoke;
+	padding: 20px;
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}

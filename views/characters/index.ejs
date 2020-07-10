@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/main.css" type="text/css" />
+		<title>All Characters</title>
+	</head>
+	<body>
+		<h1>Player Creations:</h1>
+		<% characters.forEach(character => { %>
+		<a href="/characters/<%= character._id %>" class="character-link">
+			<div class="card character-card">
+				<ul>
+					<li class="character-preview">
+						name: <%= character.name %>
+					</li>
+					<li class="character-preview">
+						class: <%= character.class %>
+					</li>
+					<li class="character-preview">
+						race: <%= character.race %>
+					</li>
+					<li class="character-preview">
+						creator: none yet...
+					</li>
+				</ul>
+			</div>
+		</a>
+		<% }) %>
+	</body>
+</html>

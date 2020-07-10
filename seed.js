@@ -1,44 +1,51 @@
 const db = require("./models");
 
 const character = {
-	name: "Lumpy",
+	name: "Lumpy2",
 	class: "Jester",
 	race: "Elf",
 	level: 14,
 	alignment: "Chaotic Neutral",
 	armorClass: 20,
-    health: 129,
-    hitDie: "14d8",
-    proficiencyBonus: 5,
-    speed: 30,
-    intiative: 
+	health: 129,
+	hitDie: "14d8",
+	proficiencyBonus: 5,
+	speed: 30,
+	initiative: "5",
+	strength: 8,
+	dexterity: 20,
+	constitution: 19,
+	intelligence: 13,
+	wisdom: 15,
+	charisma: 20,
+	gold: 400,
 };
 
-// .create(data, function(error,db object))
-// db.Fruit.create(raspberry, function(error, createdFruit){
-//   if(error){
-//     console.log(error.errmsg);
-//   } else {
-//     console.log(createdFruit);
-//   }
-// });
+//.create(data, function(error,db object))
+db.Character.create(character, function (error, createdCharacter) {
+	if (error) {
+		console.log(error.errmsg);
+	} else {
+		console.log(createdCharacter);
+	}
+});
 
 // .find(search, function(error, db objects))
-// db.Fruit.find({},function(error, allFruit){
-//   if(error){
-//     console.log(error);
-//   } else {
-//     console.log(allFruit);
-//   }
+// db.Character.find({}, function (error, allCharacters) {
+// 	if (error) {
+// 		console.log(error);
+// 	} else {
+// 		console.log(allCharacters);
+// 	}
 // });
 
 // findByIdAndDelete(id, function(error, deletedObject))
-// db.Fruit.findByIdAndDelete("5ec816af629dc859910e17df", function(error, deletedObject){
-//   if(error){
-//     console.log(error);
-//   } else {
-//     console.log(deletedObject);
-//   }
+// db.Fruit.findByIdAndDelete("", function (error, deletedObject) {
+// 	if (error) {
+// 		console.log(error);
+// 	} else {
+// 		console.log(deletedObject);
+// 	}
 // });
 
 // findByIdAndUpdate(id, dataToUpdate, {new:true}, function(error, updatedObj){})

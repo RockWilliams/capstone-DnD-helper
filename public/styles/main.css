@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-color: lightblue;
+	position: absolute;
+}
+
+.character-card {
+	border: 3px solid red;
+	margin: 5px;
+	padding: 5px;
+	width: 175px;
+	height: 75px;
+	/* text-decoration: none; */
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

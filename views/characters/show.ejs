@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/styles/characterShow.css"
+			type="text/css"
+		/>
+		<title>Character Show Page</title>
+	</head>
+	<body>
+		<h1>Character show</h1>
+		<div class="character-sheet">
+			<header>
+				<h2>
+					Name: <%= character.name %> | Class: <%= character.class %>
+					| Race: <%= character.race %> | Level: <%= character.level
+					%> | Alignment: <%= character.alignment %>
+				</h2>
+				<h3>
+					AC: <%= character.armorClass %> | HP: <%= character.health
+					%> | Hit Die: <%= character.hitDie %> | Proficiency <%=
+					character.proficiencyBonus %> | Bonus: Speed: <%=
+					character.speed %> | Initiative: <%= character.initiative %>
+				</h3>
+			</header>
+			<div class="main-content">
+				<h3>
+					Str: <%= character.strength %> | Dex: <%=
+					character.dexterity %> | Con: <%= character.constitution %>
+					| Int: <%= character.intelligence %> | Wis: <%=
+					character.wisdom %> | Cha: <%= character.charisma %>
+				</h3>
+			</div>
+		</div>
+	</body>
+</html>
