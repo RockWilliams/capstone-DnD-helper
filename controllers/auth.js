@@ -56,7 +56,8 @@ router.post("/login", async function (req, res) {
 			id: foundUser._id,
 			username: foundUser.username,
 		};
-		res.render("index");
+		const context = { user: foundUser };
+		res.render("index", context);
 	} catch (err) {
 		console.log(err);
 		res.send({ message: "Internal Server Error", error: err });
@@ -66,7 +67,8 @@ router.post("/login", async function (req, res) {
 // logout
 router.delete("/logout", async function (req, res) {
 	await req.session.destroy();
-	res.render("index");
+
+	res.render("index", { user: null });
 });
 
 // profile page

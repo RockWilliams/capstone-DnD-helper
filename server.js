@@ -5,9 +5,12 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
+const mongoose = require("mongoose");
+
 /* Internal Modules */
 const controllers = require("./controllers");
 const authRequired = require("./middleware/authRequired");
+const db = require("./models");
 
 /* Instanced Modules */
 const app = express();
@@ -43,7 +46,25 @@ app.use(express.static(__dirname + "/public"));
 
 /* root routes */
 app.get("/", function (req, res) {
-	res.render("index");
+	/* db.Character.find({}, function (err, allCharacters) {
+		if (err) {
+			console.log(err);
+			res.send({ message: "Internal Server Error" });
+		} else {
+			res.send(allCharacters);
+		}
+	}); */
+	if (req.session.currentUser) {
+		db.User.findById(req.session.currentUser._id)
+			.populate("user")
+			.exec(function (err, foundUser) {
+				const context = { user: foundUser };
+				res.render("index", context);
+			});
+	} else {
+		const context = { user: null };
+		res.render("index", context);
+	}
 });
 
 /* auth routes */

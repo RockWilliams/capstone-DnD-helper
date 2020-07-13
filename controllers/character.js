@@ -8,15 +8,17 @@ const db = require("../models");
 
 //index - all characters
 router.get("/", function (req, res) {
-	db.Character.find({}, function (err, allCharacters) {
-		if (err) {
-			console.log(err);
-			res.send({ message: "Internal Server error." });
-		} else {
-			const context = { characters: allCharacters };
-			res.render("characters/index", context);
-		}
-	});
+	db.Character.find({})
+		.populate("user")
+		.exec(function (err, allCharacters) {
+			if (err) {
+				console.log(err);
+				res.send({ message: "Internal Server error." });
+			} else {
+				const context = { characters: allCharacters };
+				res.render("characters/index", context);
+			}
+		});
 });
 
 // new character
@@ -40,8 +42,10 @@ router.post("/", function (req, res) {
 					res.send({ message: "Internal Server Error" });
 				} else {
 					foundUser.characters.push(createdCharacter);
-					foundUser.save();
 					createdCharacter.user = foundUser._id;
+					console.log("Character's User Id", createdCharacter.user);
+					foundUser.save();
+					createdCharacter.save();
 					res.redirect(`/characters/${createdCharacter._id}`);
 				}
 			});
@@ -61,6 +65,7 @@ router.get("/:id", function (req, res) {
 				const context = {
 					character: foundCharacter,
 					items: foundCharacter.items,
+					currentUser: req.session.currentUser,
 				};
 				res.render("characters/show", context);
 			}

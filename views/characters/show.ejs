@@ -18,19 +18,23 @@
 					Name: <%= character.name %> | Class: <%= character.class %>
 					| Race: <%= character.race %> | Level: <%= character.level
 					%> | Alignment: <%= character.alignment %>
-					<span>
-						<a href="/characters/<%= character._id %>/edit ">
-							Edit
-						</a>
-					</span>
-					<span>
-						<form
-							action="/characters/<%= character._id%>?_method=DELETE"
-							method="POST"
-						>
-							<input type="submit" value="Delete" />
-						</form>
-					</span>
+					<section>
+						<span>
+							<% if (currentUser.id == character.user._id) { %>
+
+							<a href="/characters/<%= character._id %>/edit ">
+								Edit
+							</a>
+
+							<form
+								action="/characters/<%= character._id%>?_method=DELETE"
+								method="POST"
+							>
+								<input type="submit" value="Delete" />
+							</form>
+							<% } %>
+						</span>
+					</section>
 				</h2>
 				<h3>
 					AC: <%= character.armorClass %> | HP: <%= character.health
@@ -56,22 +60,26 @@
 				<h3>
 					Items --------- Weight(lb)
 					<span>
+						<% if (currentUser.id == character.user._id) { %>
 						<button>
 							<a href="/characters/<%= character._id %>/new-item">
 								+
 							</a>
 						</button>
+						<% } %>
 					</span>
 				</h3>
 				<% items.forEach(item => { %>
 				<p>
 					<%= item.name %> --- <%= item.weight %>(lbs)
 					<span>
+						<% if (currentUser.id == character.user._id) { %>
 						<a
 							href="/characters/<%= character._id %>/<%= item._id %>"
 						>
 							<button>Edit</button>
 						</a>
+						<% } %>
 					</span>
 					<!-- <span>
 						<form

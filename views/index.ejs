@@ -7,8 +7,16 @@
 	</head>
 	<body>
 		<h1>Home</h1>
+		<% if (user) { %>
+		<h1>Hello, <%= user.username %></h1>
+		<% } else { %>
+		<h1>Hello, please log in to view character details</h1>
+		<% } %>
 		<a href="/characters">All characters</a>
 		<a href="/register">Register</a>
 		<a href="/login">Login</a>
+		<form class="logout" action="/logout?_method=DELETE" method="POST">
+			<input class="" type="submit" value="Logout" />
+		</form>
 	</body>
 </html>
