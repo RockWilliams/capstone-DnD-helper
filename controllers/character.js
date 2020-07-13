@@ -108,9 +108,14 @@ router.delete("/:id", async function (req, res) {
 		const deletedCharacter = await db.Character.findByIdAndDelete(
 			req.params.id
 		);
-		const deletedItems = await db.Character.remove({
+		const deletedItems = await db.Item.remove({
 			character: deletedCharacter._id,
 		});
+
+		const removedCharacter = await db.User.remove({
+			character: deletedCharacter._id,
+		});
+
 		res.redirect("/characters");
 	} catch (err) {
 		console.log(err);

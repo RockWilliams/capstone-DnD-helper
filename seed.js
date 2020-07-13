@@ -22,13 +22,13 @@ const character = {
 };
 
 //.create(data, function(error,db object))
-db.Character.create(character, function (error, createdCharacter) {
+/* db.Character.create(character, function (error, createdCharacter) {
 	if (error) {
 		console.log(error.errmsg);
 	} else {
 		console.log(createdCharacter);
 	}
-});
+}); */
 
 // .find(search, function(error, db objects))
 // db.Character.find({}, function (error, allCharacters) {
@@ -39,14 +39,18 @@ db.Character.create(character, function (error, createdCharacter) {
 // 	}
 // });
 
+// dont delete 5f0c81d0d7f533287018ee51
 // findByIdAndDelete(id, function(error, deletedObject))
-// db.Fruit.findByIdAndDelete("", function (error, deletedObject) {
-// 	if (error) {
-// 		console.log(error);
-// 	} else {
-// 		console.log(deletedObject);
-// 	}
-// });
+db.Character.findByIdAndDelete("5f0ca9dbe94754626a8fbdde", function (
+	error,
+	deletedObject
+) {
+	if (error) {
+		console.log(error);
+	} else {
+		console.log(deletedObject);
+	}
+});
 
 // findByIdAndUpdate(id, dataToUpdate, {new:true}, function(error, updatedObj){})
 // const updateData = {

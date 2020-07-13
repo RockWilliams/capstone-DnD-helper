@@ -11,6 +11,7 @@ const mongoose = require("mongoose");
 const controllers = require("./controllers");
 const authRequired = require("./middleware/authRequired");
 const db = require("./models");
+const { character } = require("./controllers");
 
 /* Instanced Modules */
 const app = express();
@@ -58,12 +59,36 @@ app.get("/", function (req, res) {
 		db.User.findById(req.session.currentUser._id)
 			.populate("user")
 			.exec(function (err, foundUser) {
-				const context = { user: foundUser };
-				res.render("index", context);
+				db.Character.find({}, function (err, allCharacters) {
+					if (err) {
+						console.log(err);
+						res.send({ message: "Internal Server Error" });
+					} else {
+						const context = {
+							user: req.session.currentUser,
+							characters: allCharacters,
+						};
+						console.log("loading index --- logged in");
+						res.render("index", context);
+					}
+				});
 			});
 	} else {
-		const context = { user: null };
-		res.render("index", context);
+		db.Character.find({})
+			.populate("user")
+			.exec(function (err, allCharacters) {
+				if (err) {
+					console.log(err);
+					res.send({ message: "Internal Server Error" });
+				} else {
+					const context = {
+						user: req.session.currentUser,
+						characters: allCharacters,
+					};
+					console.log("loading index while logged out");
+					res.render("index", context);
+				}
+			});
 	}
 });
 
@@ -71,7 +96,7 @@ app.get("/", function (req, res) {
 app.use("/", controllers.auth);
 
 // character routes
-app.use("/characters", controllers.character);
+app.use("/characters", authRequired, controllers.character);
 
 /* Bind Server to Port */
 app.listen(PORT, function () {

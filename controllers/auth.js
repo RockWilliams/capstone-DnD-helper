@@ -41,7 +41,9 @@ router.get("/login", function (req, res) {
 // log into account
 router.post("/login", async function (req, res) {
 	try {
-		const foundUser = await db.User.findOne({ email: req.body.email });
+		const foundUser = await (
+			await db.User.findOne({ email: req.body.email })
+		).populate("user");
 		if (!foundUser) {
 			return res.send({ message: "Password or Email incorrect" });
 		}
@@ -74,13 +76,11 @@ router.delete("/logout", async function (req, res) {
 // profile page
 router.get("/profile", async function (req, res) {
 	try {
-		const foundUser = await db.User.findById(req.sessions.currentUser.id);
-		const userCharacters = await db.Character.find({
-			user: req.session.currentUser.id,
-		});
-		const context = { user: foundUser, characters: userCharacters };
+		const foundUser = await db.User.findById(req.session.currentUser.id);
+		const context = { user: foundUser, characters: foundUser.characters };
 		res.render("auth/profile", context);
 	} catch (err) {
+		console.log(err);
 		res.send({ message: "Internal Server Error", error: err });
 	}
 });
