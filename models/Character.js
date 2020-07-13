@@ -34,6 +34,10 @@ const characterSchema = new mongoose.Schema({
 	proficiencies: { type: String, required: false },
 	abilities: { type: String, required: false },
 	traits: { type: String, required: false },
+	user: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "User",
+	},
 });
 
 const Character = mongoose.model("Character", characterSchema);

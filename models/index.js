@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 const connectionString =
-	process.env.MONGODB_URI || "mongodb://localhost:27017/store";
+	process.env.MONGODB_URI || "mongodb://localhost:27017/capstone";
 mongoose
 	.connect(connectionString, {
 		useNewUrlParser: true,
@@ -20,4 +20,5 @@ mongoose
 module.exports = {
 	Character: require("./Character"),
 	Item: require("./Item"),
+	User: require("./User"),
 };

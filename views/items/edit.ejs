@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New Item</title>
+	</head>
+	<body>
+		<header>
+			<h1>Edit Item for <%= character.name %></h1>
+		</header>
+		<main>
+			<div class="edit-item-form">
+				<form
+					action="/characters/<%= character._id %>/<%= item._id %>?_method=PUT"
+					method="POST"
+				>
+					Name:
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						value="<%= item.name %> "
+					/>
+					Weight(lbs):
+					<input
+						type="text"
+						name="weight"
+						placeholder="Weight"
+						value="<%= item.weight %>"
+					/>
+					<input type="submit" value="Edit Item" />
+				</form>
+			</div>
+			<div class="delete item">
+				<form
+					action="/characters/<%= character._id%>/<%= item._id %>?_method=DELETE"
+					method="POST"
+				>
+					<input type="submit" value="Delete Item" />
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

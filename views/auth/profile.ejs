@@ -3,14 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/styles/main.css" type="text/css" />
-		<title>All Characters</title>
+		<title>Profile</title>
 	</head>
 	<body>
-		<h1>
-			Player Creations:
-			<span><a href="/characters/new">New Character</a></span>
-		</h1>
+		<h1>Hello <%= user.username %></h1>
 		<% characters.forEach(character => { %>
 		<a href="/characters/<%= character._id %>" class="character-link">
 			<div class="card character-card">
@@ -25,7 +21,7 @@
 						race: <%= character.race %>
 					</li>
 					<li class="character-preview">
-						creator: <%= character.user %>
+						creator: <%= user.username %>
 					</li>
 				</ul>
 			</div>
