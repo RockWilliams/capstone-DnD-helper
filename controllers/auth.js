@@ -76,7 +76,10 @@ router.delete("/logout", async function (req, res) {
 // profile page
 router.get("/profile", async function (req, res) {
 	try {
-		const foundUser = await db.User.findById(req.session.currentUser.id);
+		const foundUser = await db.User.findById(
+			req.session.currentUser.id
+		).populate("characters");
+
 		const context = { user: foundUser, characters: foundUser.characters };
 		res.render("auth/profile", context);
 	} catch (err) {

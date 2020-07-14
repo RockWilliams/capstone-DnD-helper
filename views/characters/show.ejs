@@ -9,13 +9,71 @@
 			type="text/css"
 		/>
 
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+
 		<title>Character Show Page</title>
 	</head>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+			<a class="navbar-brand" href="/">Character Buddy</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/characters"
+							>All Characters</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/characters/new"
+							>New Character</a
+						>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="/profile" class="nav-link">
+								Profile
+							</a>
+						</li>
+						<li class="nav-item">
+							<form
+								class="form-inline logout"
+								action="/logout?_method=DELETE"
+								method="POST"
+							>
+								<input
+									class="form-control mr-sm-2"
+									type="submit"
+									value="Logout"
+								/>
+							</form>
+						</li>
+					</ul>
+				</span>
+			</div>
+		</nav>
+	</header>
 	<body>
-		<header></header>
 		<h1>Character show</h1>
-		<main class="character-sheet">
-			<header>
+		<div class="card character-sheet">
+			<div class="card-header">
 				<h2>
 					Name: <%= character.name %> | Class: <%= character.class %>
 					| Race: <%= character.race %> | Level: <%= character.level
@@ -44,7 +102,8 @@
 					character.proficiencyBonus %> | Bonus: Speed: <%=
 					character.speed %> | Initiative: <%= character.initiative %>
 				</h3>
-			</header>
+			</div>
+			<div class="card-body"></div>
 			<div class="stats">
 				<h3>
 					Str: <%= character.strength %> | Dex: <%=
@@ -83,16 +142,6 @@
 						</a>
 						<% } %>
 					</span>
-					<!-- <span>
-						<form
-							action="/characters/<%= character._id%>/<%= item._id %>?_method=DELETE"
-							method="POST"
-						>
-							<span>
-								<input type="submit" value="Delete" />
-							</span>
-						</form>
-					</span> -->
 				</p>
 				<% }) %>
 			</div>
@@ -112,6 +161,32 @@
 				<h3>Languages:</h3>
 				<p><%= character.languages %></p>
 			</div>
-		</main>
+		</div>
+		<hr>
+		<div class="card border-secondary m-auto" style="width: 80rem;">
+			<div class="card-body mx-auto">
+				<h2 class="card-title"><%= character.name %></h5>
+				<h3 class="card-text">
+					Class: <%= character.class %>
+					| Race: <%= character.race %> | Level: <%= character.level
+					%> | Alignment: <%= character.alignment %>
+				</h3>
+				<h3 class="card-text">
+					AC: <%= character.armorClass %> | HP: <%= character.health
+					%> | Hit Die: <%= character.hitDie %> | Proficiency <%=
+					character.proficiencyBonus %> | Bonus: Speed: <%=
+					character.speed %> | Initiative: <%= character.initiative %>
+				</h3>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Cras justo odio</li>
+				<li class="list-group-item">Dapibus ac facilisis in</li>
+				<li class="list-group-item">Vestibulum at eros</li>
+			</ul>
+			<div class="card-body">
+				<a href="#" class="card-link">Card link</a>
+				<a href="#" class="card-link">Another link</a>
+			</div>
+		</div>
 	</body>
 </html>

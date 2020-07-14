@@ -3,13 +3,70 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+
 		<title>New Item</title>
 	</head>
 	<body>
 		<header>
-			<h1>New Item for <%= character.name %></h1>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+				<a class="navbar-brand" href="/">Character Buddy</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarText"
+					aria-controls="navbarText"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/characters"
+								>All Characters</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/characters/new"
+								>New Character</a
+							>
+						</li>
+					</ul>
+					<span class="navbar-text">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="/profile" class="nav-link">
+									Profile
+								</a>
+							</li>
+							<li class="nav-item">
+								<form
+									class="form-inline logout"
+									action="/logout?_method=DELETE"
+									method="POST"
+								>
+									<input
+										class="form-control mr-sm-2"
+										type="submit"
+										value="Logout"
+									/>
+								</form>
+							</li>
+						</ul>
+					</span>
+				</div>
+			</nav>
 		</header>
 		<main>
+			<h1>New Item for <%= character.name %></h1>
 			<form action="/characters/<%= character._id %>" method="POST">
 				Name:
 				<input type="text" name="name" placeholder="Name" />
