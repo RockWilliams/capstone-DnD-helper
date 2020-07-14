@@ -72,54 +72,42 @@
 	</header>
 	<body>
 		<h1>Character show</h1>
-		<div class="card character-sheet">
-			<div class="card-header">
-				<h2>
-					Name: <%= character.name %> | Class: <%= character.class %>
+		<div class="card border-secondary m-auto" style="width: 65rem;">
+			<div class="card-header mx-auto">
+				<h2 class="card-title"><%= character.name %></h5>
+				<h3 class="card-text">
+					Class: <%= character.class %>
 					| Race: <%= character.race %> | Level: <%= character.level
 					%> | Alignment: <%= character.alignment %>
-					<section>
-						<span>
-							<% if (currentUser.id == character.user._id) { %>
-
-							<a href="/characters/<%= character._id %>/edit ">
-								Edit
-							</a>
-
-							<form
-								action="/characters/<%= character._id%>?_method=DELETE"
-								method="POST"
-							>
-								<input type="submit" value="Delete" />
-							</form>
-							<% } %>
-						</span>
-					</section>
-				</h2>
-				<h3>
+				</h3>
+				<h3 class="card-text">
 					AC: <%= character.armorClass %> | HP: <%= character.health
-					%> | Hit Die: <%= character.hitDie %> | Proficiency <%=
+					%> | Hit Die: <%= character.hitDie %> | Proficiency: <%=
 					character.proficiencyBonus %> | Bonus: Speed: <%=
 					character.speed %> | Initiative: <%= character.initiative %>
 				</h3>
 			</div>
-			<div class="card-body"></div>
-			<div class="stats">
-				<h3>
+			<div class="card-body mx-auto">
+				<div class="stats">
+					<h3>
 					Str: <%= character.strength %> | Dex: <%=
 					character.dexterity %> | Con: <%= character.constitution %>
 					| Int: <%= character.intelligence %> | Wis: <%=
 					character.wisdom %> | Cha: <%= character.charisma %>
 				</h3>
-			</div>
-			<div class="money">
-				CP: <%= character.copper %> | SP: <%= character.silver %> | EP:
+				</div>
+				<div class="money">
+					<h2>
+						CP: <%= character.copper %> | SP: <%= character.silver %> | EP:
 				<%= character.electrum %> | GP: <%= character.gold %> | PP: <%=
-				character.platinum %> |
+				character.platinum %> 
+					</h2>
+				</div>
 			</div>
-			<div class="items">
-				<h3>
-					Items --------- Weight(lb)
+			<div class="card-body mx-auto">
+				<div class="items">
+					<h3>
+					Items: 
 					<span>
 						<% if (currentUser.id == character.user._id) { %>
 						<button>
@@ -144,48 +132,39 @@
 					</span>
 				</p>
 				<% }) %>
+				</div>
 			</div>
-			<div class="abilities">
-				<h3>Abilities:</h3>
-				<p><%= character.abilities %></p>
-			</div>
-			<div class="proficiencies">
-				<h3>Proficiencies:</h3>
-				<p><%= character.proficiencies %></p>
-			</div>
-			<div class="traits">
-				<h3>Traits:</h3>
-				<p><%= character.traits %></p>
-			</div>
-			<div class="languages">
-				<h3>Languages:</h3>
-				<p><%= character.languages %></p>
-			</div>
-		</div>
-		<hr>
-		<div class="card border-secondary m-auto" style="width: 80rem;">
-			<div class="card-body mx-auto">
-				<h2 class="card-title"><%= character.name %></h5>
-				<h3 class="card-text">
-					Class: <%= character.class %>
-					| Race: <%= character.race %> | Level: <%= character.level
-					%> | Alignment: <%= character.alignment %>
-				</h3>
-				<h3 class="card-text">
-					AC: <%= character.armorClass %> | HP: <%= character.health
-					%> | Hit Die: <%= character.hitDie %> | Proficiency <%=
-					character.proficiencyBonus %> | Bonus: Speed: <%=
-					character.speed %> | Initiative: <%= character.initiative %>
-				</h3>
-			</div>
+
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Cras justo odio</li>
-				<li class="list-group-item">Dapibus ac facilisis in</li>
-				<li class="list-group-item">Vestibulum at eros</li>
+				<li class="list-group-item">
+					<h5>Abilities:</h5>
+					<p><%= character.abilities %></p>
+				</li>
+				<li class="list-group-item">
+					<h5>Proficiencies:</h5>
+					<p><%= character.proficiencies %></p>
+				</li>
+				<li class="list-group-item">
+					<h5>Traits:</h5>
+					<p><%= character.traits %> </p>
+				</li>
+				<li class="list-group-item">
+					<h5>Languages:</h5>
+					<p><%= character.languages %></p>
+				</li>
 			</ul>
-			<div class="card-body">
-				<a href="#" class="card-link">Card link</a>
-				<a href="#" class="card-link">Another link</a>
+			
+			
+			<div class="card-footer mx-auto">
+				<% if (currentUser.id == character.user._id) { %>
+					<a href="/characters/<%= character._id %>/edit " class="btn btn-primary">
+						Edit
+					</a>
+					
+					<form class="form-inline" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
+						<input class="btn btn-primary" type="submit" value="Delete" />
+					</form>
+				<% } %>
 			</div>
 		</div>
 	</body>

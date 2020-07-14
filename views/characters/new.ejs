@@ -66,54 +66,246 @@
 			</nav>
 		</header>
 		<main class="new-character">
+			<h1>Make A New Character!</h1>
+			<hr />
+
 			<form action="/characters" class="new-character-form" method="POST">
-				<input type="text" name="name" placeholder="Name" />
-				<input type="text" name="class" placeholder="Class" />
-				<input type="text" name="race" placeholder="Race" />
-				<input type="text" name="level" placeholder="Level" />
-				<input type="text" name="alignment" placeholder="Alignment" />
-				<input
-					type="text"
-					name="armorClass"
-					placeholder="Armor Class"
-				/>
-				<input type="text" name="health" placeholder="Total Health" />
-				<input type="text" name="hitDie" placeholder="Hit Die" />
-				<input
-					type="text"
-					name="proficiencyBonus"
-					placeholder="Proficiency Bonus"
-				/>
-				<input type="text" name="speed" placeholder="Speed" />
-				<input type="text" name="initiative" placeholder="Initiative" />
-				<input type="text" name="strength" placeholder="Strength" />
-				<input type="text" name="dexterity" placeholder="Dexterity" />
-				<input
-					type="text"
-					name="constitution"
-					placeholder="Constitution"
-				/>
-				<input
-					type="text"
-					name="intelligence"
-					placeholder="Intelligence"
-				/>
-				<input type="text" name="wisdom" placeholder="Wisdom" />
-				<input type="text" name="charisma" placeholder="Charisma" />
-				<input type="text" name="copper" placeholder="Copper" />
-				<input type="text" name="silver" placeholder="Silver" />
-				<input type="text" name="electrum" placeholder="Electrum" />
-				<input type="text" name="gold" placeholder="Gold" />
-				<input type="text" name="platinum" placeholder="Platinum" />
-				<input type="text" name="languages" placeholder="Languages" />
-				<input
-					type="text"
-					name="proficiencies"
-					placeholder="Proficiencies"
-				/>
-				<input type="text" name="abilities" placeholder="Abilities" />
-				<input type="text" name="traits" placeholder="Traits" />
-				<input id="add-character" type="submit" value="Add Character" />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="name"
+							placeholder="Name"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="class"
+							placeholder="Class"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="race"
+							placeholder="Race"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="level"
+							placeholder="Level"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="alignment"
+							placeholder="Alignment"
+						/>
+					</div>
+				</div>
+				<hr />
+
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="armorClass"
+							placeholder="Armor Class"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="health"
+							placeholder="Total Health"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="hitDie"
+							placeholder="Hit Die"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="proficiencyBonus"
+							placeholder="Proficiency Bonus"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="speed"
+							placeholder="Speed"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="initiative"
+							placeholder="Initiative"
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="strength"
+							placeholder="Strength"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="dexterity"
+							placeholder="Dexterity"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="constitution"
+							placeholder="Constitution"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="intelligence"
+							placeholder="Intelligence"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="wisdom"
+							placeholder="Wisdom"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="charisma"
+							placeholder="Charisma"
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="copper"
+							placeholder="Copper"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="silver"
+							placeholder="Silver"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="electrum"
+							placeholder="Electrum"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="gold"
+							placeholder="Gold"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="platinum"
+							placeholder="Platinum"
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="abilities"
+							placeholder="Abilities"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="proficiencies"
+							placeholder="Proficiencies"
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="traits"
+							placeholder="Traits"
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="languages"
+							placeholder="Languages"
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row mx-auto">
+					<input
+						id="add-character"
+						class="btn btn-primary form-control"
+						type="submit"
+						value="Add Character"
+						style="width: 200px;"
+					/>
+				</div>
 			</form>
 		</main>
 	</body>
