@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="stylesheet"
-			href="/styles/characterShow.css"
+			href="/styles/main.css"
 			type="text/css"
 		/>
 
@@ -71,7 +71,7 @@
 		</nav>
 	</header>
 	<body>
-		<h1>Character show</h1>
+		<main class="body text-center">
 		<div class="card border-secondary m-auto" style="width: 65rem;">
 			<div class="card-header mx-auto">
 				<h2 class="card-title"><%= character.name %></h5>
@@ -94,7 +94,7 @@
 					character.dexterity %> | Con: <%= character.constitution %>
 					| Int: <%= character.intelligence %> | Wis: <%=
 					character.wisdom %> | Cha: <%= character.charisma %>
-				</h3>
+					</h3>
 				</div>
 				<div class="money">
 					<h2>
@@ -103,8 +103,7 @@
 				character.platinum %> 
 					</h2>
 				</div>
-			</div>
-			<div class="card-body mx-auto">
+				<hr>
 				<div class="items">
 					<h3>
 					Items: 
@@ -151,17 +150,21 @@
 			</ul>
 			
 			
-			<div class="card-footer mx-auto">
+			
 				<% if (currentUser.id == character.user._id) { %>
-					<a href="/characters/<%= character._id %>/edit " class="btn btn-warning">
-						Edit
-					</a>
-					
-					<form class="form-inline" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
-						<input class="btn btn-danger" type="submit" value="Delete" />
-					</form>
+					<div class="card-footer mx-auto"></div>
+						<a href="/characters/<%= character._id %>/edit " class="btn btn-warning mx-auto" style="width: 71px;">
+							Edit
+						</a>
+						
+						<form class="form-inline mx-auto" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
+							<input class="btn btn-danger" type="submit" value="Delete" />
+						</form>
+					</div>
 				<% } %>
-			</div>
+			
 		</div>
+		</main>
+		
 	</body>
 </html>

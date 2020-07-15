@@ -1,3 +1,9 @@
+.body {
+	margin: 10px;
+
+	font-family: "Roboto", sans-serif;
+}
+
 .card {
 	border: solid 2px red;
 	padding: 5px;

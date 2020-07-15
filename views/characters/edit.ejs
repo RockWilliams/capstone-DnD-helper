@@ -9,6 +9,7 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="/styles/main.css" type="text/css" />
 		<title>Edit Character</title>
 	</head>
 	<body>
@@ -64,7 +65,7 @@
 				</div>
 			</nav>
 		</header>
-		<main class="edit-character">
+		<main class="edit-character body text-center">
 			<h1>Edit Character</h1>
 			<form
 				action="/characters/<%= character._id %>?_method=PUT"
@@ -328,7 +329,7 @@
 				<div class="row mx-auto">
 					<input
 						id="edit-character"
-						class="btn btn-primary form-control"
+						class="btn btn-success form-control mx-auto"
 						type="submit"
 						value="Update Character"
 						style="width: 200px;"

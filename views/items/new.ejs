@@ -9,7 +9,7 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
-
+		<link rel="stylesheet" href="/styles/main.css" type="text/css" />
 		<title>New Item</title>
 	</head>
 	<body>
@@ -65,7 +65,7 @@
 				</div>
 			</nav>
 		</header>
-		<main>
+		<main class="body">
 			<h1>New Item for <%= character.name %></h1>
 			<form action="/characters/<%= character._id %>" method="POST">
 				Name:
