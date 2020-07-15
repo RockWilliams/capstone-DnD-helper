@@ -110,11 +110,9 @@
 					Items: 
 					<span>
 						<% if (currentUser.id == character.user._id) { %>
-						<button>
-							<a href="/characters/<%= character._id %>/new-item">
+							<a class="btn btn btn-success btn-sm" href="/characters/<%= character._id %>/new-item">
 								+
 							</a>
-						</button>
 						<% } %>
 					</span>
 				</h3>
@@ -123,10 +121,8 @@
 					<%= item.name %> --- <%= item.weight %>(lbs)
 					<span>
 						<% if (currentUser.id == character.user._id) { %>
-						<a
-							href="/characters/<%= character._id %>/<%= item._id %>"
-						>
-							<button>Edit</button>
+						<a class="btn btn-warning btn-sm" href="/characters/<%= character._id %>/<%= item._id %>">
+							Edit
 						</a>
 						<% } %>
 					</span>
@@ -157,12 +153,12 @@
 			
 			<div class="card-footer mx-auto">
 				<% if (currentUser.id == character.user._id) { %>
-					<a href="/characters/<%= character._id %>/edit " class="btn btn-primary">
+					<a href="/characters/<%= character._id %>/edit " class="btn btn-warning">
 						Edit
 					</a>
 					
 					<form class="form-inline" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
-						<input class="btn btn-primary" type="submit" value="Delete" />
+						<input class="btn btn-danger" type="submit" value="Delete" />
 					</form>
 				<% } %>
 			</div>

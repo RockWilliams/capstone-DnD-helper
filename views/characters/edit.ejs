@@ -9,7 +9,7 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
-		<title>EditCharacter</title>
+		<title>Edit Character</title>
 	</head>
 	<body>
 		<header>
@@ -65,172 +65,275 @@
 			</nav>
 		</header>
 		<main class="edit-character">
+			<h1>Edit Character</h1>
 			<form
 				action="/characters/<%= character._id %>?_method=PUT"
 				class="new-character-form"
 				method="POST"
 			>
-				<input
-					type="text"
-					name="name"
-					placeholder="Name"
-					value="<%= character.name %>"
-				/>
-				<input
-					type="text"
-					name="class"
-					placeholder="Class"
-					value="<%= character.class %>"
-				/>
-				<input
-					type="text"
-					name="race"
-					placeholder="Race"
-					value="<%= character.race %>"
-				/>
-				<input
-					type="text"
-					name="level"
-					placeholder="Level"
-					value="<%= character.level %>"
-				/>
-				<input
-					type="text"
-					name="alignment"
-					placeholder="Alignment"
-					value="<%= character.alignment %>"
-				/>
-				<input
-					type="text"
-					name="armorClass"
-					placeholder="Armor Class"
-					value="<%= character.armorClass %>"
-				/>
-				<input
-					type="text"
-					name="health"
-					placeholder="Total Health"
-					value="<%= character.health %>"
-				/>
-				<input
-					type="text"
-					name="hitDie"
-					placeholder="Hit Die"
-					value="<%= character.hitDie %>"
-				/>
-				<input
-					type="text"
-					name="proficiencyBonus"
-					placeholder="Proficiency Bonus"
-					value="<%= character.proficiencyBonus %>"
-				/>
-				<input
-					type="text"
-					name="speed"
-					placeholder="Speed"
-					value="<%= character.speed %>"
-				/>
-				<input
-					type="text"
-					name="initiative"
-					placeholder="Initiative"
-					value="<%= character.initiative %>"
-				/>
-				<input
-					type="text"
-					name="strength"
-					placeholder="Strength"
-					value="<%= character.strength %>"
-				/>
-				<input
-					type="text"
-					name="dexterity"
-					placeholder="Dexterity"
-					value="<%= character.dexterity %>"
-				/>
-				<input
-					type="text"
-					name="constitution"
-					placeholder="Constitution"
-					value="<%= character.constitution %>"
-				/>
-				<input
-					type="text"
-					name="intelligence"
-					placeholder="Intelligence"
-					value="<%= character.intelligence %>"
-				/>
-				<input
-					type="text"
-					name="wisdom"
-					placeholder="Wisdom"
-					value="<%= character.wisdom %>"
-				/>
-				<input
-					type="text"
-					name="charisma"
-					placeholder="Charisma"
-					value="<%= character.charisma %>"
-				/>
-				<input
-					type="text"
-					name="copper"
-					placeholder="Copper"
-					value="<%= character.copper %>"
-				/>
-				<input
-					type="text"
-					name="silver"
-					placeholder="Silver"
-					value="<%= character.silver %>"
-				/>
-				<input
-					type="text"
-					name="electrum"
-					placeholder="Electrum"
-					value="<%= character.electrum %>"
-				/>
-				<input
-					type="text"
-					name="gold"
-					placeholder="Gold"
-					value="<%= character.gold %>"
-				/>
-				<input
-					type="text"
-					name="platinum"
-					placeholder="Platinum"
-					value="<%= character.platinum %>"
-				/>
-				<input
-					type="text"
-					name="languages"
-					placeholder="Languages"
-					value="<%= character.languages %>"
-				/>
-				<input
-					type="text"
-					name="proficiencies"
-					placeholder="Proficiencies"
-					value="<%= character.proficiencies %>"
-				/>
-				<input
-					type="text"
-					name="abilities"
-					placeholder="Abilities"
-					value="<%= character.abilities %>"
-				/>
-				<input
-					type="text"
-					name="traits"
-					placeholder="Traits"
-					value="<%= character.traits %>"
-				/>
-				<input
-					id="add-character"
-					type="submit"
-					value="Update Character"
-				/>
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="name"
+							placeholder="Name"
+							value="<%= character.name %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="class"
+							placeholder="Class"
+							value="<%= character.class %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="race"
+							placeholder="Race"
+							value="<%= character.race %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="level"
+							placeholder="Level"
+							value="<%= character.level %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="alignment"
+							placeholder="Alignment"
+							value="<%= character.alignment %> "
+						/>
+					</div>
+				</div>
+				<hr />
+
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="armorClass"
+							placeholder="Armor Class"
+							value="<%= character.armorClass %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="health"
+							placeholder="Total Health"
+							value="<%= character.health %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="hitDie"
+							placeholder="Hit Die"
+							value="<%= character.hitDie %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="proficiencyBonus"
+							placeholder="Proficiency Bonus"
+							value="<%= character.proficiencyBonus %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="speed"
+							placeholder="Speed"
+							value="<%= character.speed %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="initiative"
+							placeholder="Initiative"
+							value="<%= character.initiative %> "
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="strength"
+							placeholder="Strength"
+							value="<%= character.strength %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="dexterity"
+							placeholder="Dexterity"
+							value="<%= character.dexterity %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="constitution"
+							placeholder="Constitution"
+							value="<%= character.constitution %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="intelligence"
+							placeholder="Intelligence"
+							value="<%= character.intelligence %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="wisdom"
+							placeholder="Wisdom"
+							value="<%= character.wisdom %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="charisma"
+							placeholder="Charisma"
+							value="<%= character.charisma %> "
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="copper"
+							placeholder="Copper"
+							value="<%= character.copper %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="silver"
+							placeholder="Silver"
+							value="<%= character.silver %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="electrum"
+							placeholder="Electrum"
+							value="<%= character.electrum %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="gold"
+							placeholder="Gold"
+							value="<%= character.gold %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="platinum"
+							placeholder="Platinum"
+							value="<%= character.platinum %> "
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="abilities"
+							placeholder="Abilities"
+							value="<%= character.abilities %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="proficiencies"
+							placeholder="Proficiencies"
+							value="<%= character.proficiencies %> "
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="traits"
+							placeholder="Traits"
+							value="<%= character.traits %> "
+						/>
+					</div>
+					<div class="col">
+						<input
+							type="text"
+							class="form-control"
+							name="languages"
+							placeholder="Languages"
+							style="height: auto;"
+							value="<%= character.languages %> "
+						/>
+					</div>
+				</div>
+				<hr />
+				<div class="row mx-auto">
+					<input
+						id="edit-character"
+						class="btn btn-primary form-control"
+						type="submit"
+						value="Update Character"
+						style="width: 200px;"
+					/>
+				</div>
 			</form>
 		</main>
 	</body>
