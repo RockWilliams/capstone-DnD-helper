@@ -68,7 +68,7 @@
 		<main class="body">
 			<h1>Hello <%= user.username %></h1>
 			<% characters.forEach(character => { %>
-			<div class="card border border-danger" style="width: 18rem;">
+			<div class="card border border-primary" style="width: 18rem;">
 				<div class="card-body">
 					<h5 class="card-title">Name: <%= character.name %></h5>
 				</div>
@@ -91,5 +91,14 @@
 			</div>
 			<% }) %>
 		</main>
+		<!-- Footer -->
+		<footer class="page-footer font-small footer-dark bg-secondary">
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">
+				© 2020 Copyright: Rock Williams Inc.
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
 	</body>
 </html>
