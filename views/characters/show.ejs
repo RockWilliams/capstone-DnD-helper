@@ -74,37 +74,201 @@
 		<main class="container body text-center character-sheet">
 		<div class="card border-secondary" style="width: 65rem;">
 			<div class="card-header mx-auto">
-				<h2 class="card-title"><%= character.name %></h5>
-				<h3 class="card-text">
-					Class: <%= character.class %>
-					| Race: <%= character.race %> | Level: <%= character.level
-					%> | Alignment: <%= character.alignment %>
-				</h3>
-				<h3 class="card-text">
-					AC: <%= character.armorClass %> | HP: <%= character.health
-					%> | Hit Die: <%= character.hitDie %> | Proficiency: <%=
-					character.proficiencyBonus %> | Bonus: Speed: <%=
-					character.speed %> | Initiative: <%= character.initiative %>
-				</h3>
+				<h2 class="card-text"><%= character.name %></h2>
+
+				<!-- ===============================  row 1  ================================= -->
+
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Class:
+							</div>
+							<div class="row">
+								<%= character.class %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Race:
+							</div>
+							<div class="row">
+								<%= character.race %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Level:
+							</div>
+							<div class="row">
+								<%= character.level %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Alignment:
+							</div>
+							<div class="row">
+								<%= character.alignment %>
+							</div>
+						</h4>
+						
+					</div>
+					<!-- ===============================  Row 2  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								AC:
+							</div>
+							<div class="row">
+								<%= character.armorClass %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								HP:
+							</div>
+							<div class="row">
+								<%= character.health %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Hit Die:
+							</div>
+							<div class="row">
+								<%= character.hitDie %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Proficiency:
+							</div>
+							<div class="row">
+								<%= character.proficiencyBonus %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Speed:
+							</div>
+							<div class="row">
+								<%= character.speed %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Initiative:
+							</div>
+							<div class="row">
+								<%= character.initiative %>
+							</div>
+						</h4>
+					</div>
+				</h2>
 			</div>
-			<div class="card-body mx-auto">
-				<div class="stats">
-					<h3>
-					Str: <%= character.strength %> | Dex: <%=
-					character.dexterity %> | Con: <%= character.constitution %>
-					| Int: <%= character.intelligence %> | Wis: <%=
-					character.wisdom %> | Cha: <%= character.charisma %>
-					</h3>
-				</div>
-				<div class="money">
-					<h2>
-						CP: <%= character.copper %> | SP: <%= character.silver %> | EP:
-				<%= character.electrum %> | GP: <%= character.gold %> | PP: <%=
-				character.platinum %> 
-					</h2>
-				</div>
+			<div class="card-body character-sheet-content mx-auto">
+				<!-- ===============================  Row 3 stats  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Str: <%= character.strength %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.strength-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Dex: <%= character.dexterity %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.dexterity-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Con: <%= character.constitution %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.constitution-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Int: <%= character.intelligence %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.intelligence-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Wis: <%= character.wisdom %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.wisdom-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Cha: <%= character.charisma %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.charisma-10)/2 %>
+							</div>
+						</h4>
+					</div>
+				</h2>
+				<!-- ===============================  Row 4 Money  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Copper:
+							</div>
+							<div class="row">
+								<%= character.copper %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Silver:
+							</div>
+							<div class="row">
+								<%= character.silver %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Electrum:
+							</div>
+							<div class="row">
+								<%= character.electrum %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Gold:
+							</div>
+							<div class="row">
+								<%= character.gold %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Platinum:
+							</div>
+							<div class="row">
+								<%= character.platinum %>
+							</div>
+						</h4>
+					</div>
+				</h2>
 				<hr>
-				<div class="items">
+				<!-- ===============================  Row 5 Items Title  ================================= -->
+				<h2 class="card-text item-title">
 					<h3>
 					Items: 
 					<span>
@@ -114,54 +278,97 @@
 							</a>
 						<% } %>
 					</span>
-				</h3>
-				<% items.forEach(item => { %>
-				<p>
-					<%= item.name %> --- <%= item.weight %>(lbs)
-					<span>
-						<% if (currentUser.id == character.user._id) { %>
-						<a class="btn btn-warning btn-sm" href="/characters/<%= character._id %>/<%= item._id %>">
-							Edit
-						</a>
-						<% } %>
-					</span>
-				</p>
-				<% }) %>
-				</div>
-			</div>
+					</h3>
+				</h2>
+
+				<!-- ===============================  Row 6 Items List  ================================= -->
+
+				<h2 class="card-text item-list">
+					<% items.forEach(item => { %>
+						<h4 class="col item-box">
+							<div class="row">
+								<div class="col">
+									<%= item.name %> --- <%= item.weight %>(lbs)
+									<span>
+										<% if (currentUser.id == character.user._id) { %>
+											<a class="btn btn-warning btn-sm" href="/characters/<%= character._id %>/<%= item._id %>">
+												Edit
+											</a>
+											<% } %>
+									</span>
+								</div>
+							</div>
+						</h4>
+						<p>
+							
+							
+						</p>
+					<% }) %>
+				</h2>
+				
+				
+			
 
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">
-					<h5>Abilities:</h5>
-					<p><%= character.abilities %></p>
-				</li>
-				<li class="list-group-item">
-					<h5>Proficiencies:</h5>
-					<p><%= character.proficiencies %></p>
-				</li>
-				<li class="list-group-item">
-					<h5>Traits:</h5>
-					<p><%= character.traits %> </p>
-				</li>
-				<li class="list-group-item">
-					<h5>Languages:</h5>
-					<p><%= character.languages %></p>
-				</li>
+
+				<!-- ===============================  Row 7 Abilities and Proficiencies  ================================= -->
+				<div class="row">
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Abilities:</h5>
+							<p><%= character.abilities %></p>
+						</li>
+					</div>
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Proficiencies:</h5>
+							<p><%= character.proficiencies %></p>
+						</li>
+					</div>
+				</div>
+				
+				<hr>
+
+				<!-- ===============================  Row 8 Traits and Languages  ================================= -->
+				<div class="row">
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Traits:</h5>
+							<p><%= character.traits %> </p>
+						</li>
+					</div>
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Languages:</h5>
+							<p><%= character.languages %></p>
+						</li>
+					</div>
+				</div>
+				
+				
 			</ul>
 			
 			
-			
+			<!-- ===============================  Row 8 Edit and Delete  ================================= -->
+			<div class="container edit-delete">
 				<% if (currentUser.id == character.user._id) { %>
-					<div class="card-footer mx-auto"></div>
-						<a href="/characters/<%= character._id %>/edit " class="btn btn-warning mx-auto" style="width: 71px;">
-							Edit
-						</a>
-						
-						<form class="form-inline mx-auto" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
-							<input class="btn btn-danger" type="submit" value="Delete" />
-						</form>
+					<div class="card-footer">
+						<div class="row">
+							<div class="col">
+								<a href="/characters/<%= character._id %>/edit " class="btn btn-warning mx-auto" style="width: 71px;">
+									Edit
+								</a>
+							</div>
+							<div class="col">
+								<form class="mx-auto" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
+									<input class="btn btn-danger" type="submit" value="Delete" />
+								</form>
+							</div>
+						</div>
 					</div>
 				<% } %>
+			</div>	
+			
 			
 		</div>
 		</main>

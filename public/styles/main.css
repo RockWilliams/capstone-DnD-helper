@@ -56,11 +56,44 @@ footer {
 	width: 1150px;
 }
 
-.character-preview {
-	background-color: #aa7e19 !important;
+.characters-display {
+	background-color: #aa3619 !important;
 }
 
 .character-preview-item {
-	background-color: #aa7e19 !important;
 	border: solid 2px black;
 }
+
+.character-box-sm {
+	border: solid 2px black;
+	margin: 4px;
+}
+
+.row {
+	align-items: center;
+	justify-content: center;
+}
+
+.card-header {
+	width: 990px;
+}
+
+.character-sheet-content {
+	width: 990px;
+}
+
+.item-box{
+	border: solid 2px black;
+	position: relative;
+	padding: 5px
+}
+
+.item-list {
+	align-items: center;
+	justify-content: center;
+}
+
+.character-about{
+	border: solid 2px black !important;
+}
+
