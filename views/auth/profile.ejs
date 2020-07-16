@@ -66,39 +66,53 @@
 	</header>
 	<body>
 		<main class="body">
-			<h1>Hello <%= user.username %>, Here Are Your Characters:</h1>
-
-			<p><%= characters %></p>
-			<% for( let index = 0; index < characters.length; index++ ) { %>
-			<div
-				class="card border border-primary character-preview"
-				style="width: 18rem;"
-			>
-				<div class="card-body">
-					<h5 class="card-title">
-						Name: <%= characters[index].name %>
-					</h5>
-				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">
-						Class: <%= characters[index].class %>
-					</li>
-					<li class="list-group-item">
-						Race: <%= characters[index].race %>
-					</li>
-					<li class="list-group-item">
-						Creator: <%= user.username %>
-					</li>
-				</ul>
-				<div class="card-body">
-					<a
-						href="/characters/<%= characters[index]._id %>"
-						class="btn btn-primary"
-						>View Details</a
-					>
+			<!-- ===============================  All characters Card  ================================= -->
+			<div class="container">
+				<div class="card">
+					<h2 class="card-header">
+						Hello <%= user.username %>, Here Are Your Characters:
+					</h2>
+					<div class="card-body">
+						<% for( let index = 0; index < characters.length;
+						index++ ) { %>
+						<div
+							class="card border border-primary character-preview"
+							style="width: 18rem;"
+						>
+							<div class="card-body">
+								<h5 class="card-title">
+									Name: <%= characters[index].name %>
+								</h5>
+							</div>
+							<ul class="list-group border-dark list-group-flush">
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
+									Class: <%= characters[index].class %>
+								</li>
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
+									Race: <%= characters[index].race %>
+								</li>
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
+									Creator: <%= user.username %>
+								</li>
+							</ul>
+							<div class="card-body">
+								<a
+									href="/characters/<%= characters[index]._id %>"
+									class="btn btn-primary"
+									>View Details</a
+								>
+							</div>
+						</div>
+						<% } %>
+					</div>
 				</div>
 			</div>
-			<% } %>
 		</main>
 		<!-- Footer -->
 		<footer class="page-footer font-small footer-dark bg-secondary">

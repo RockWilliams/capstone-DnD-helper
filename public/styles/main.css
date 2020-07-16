@@ -55,3 +55,12 @@ footer {
 	float: none !important;
 	width: 1150px;
 }
+
+.character-preview {
+	background-color: #aa7e19 !important;
+}
+
+.character-preview-item {
+	background-color: #aa7e19 !important;
+	border: solid 2px black;
+}

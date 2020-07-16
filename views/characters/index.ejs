@@ -69,24 +69,33 @@
 		<main class="body">
 			<!-- ===============================  All characters Card  ================================= -->
 			<div class="container">
-				<div class="card character-preview">
+				<div class="card">
 					<h3 class="card-header">All Characters:</h3>
 					<div class="card-body">
 						<% characters.forEach(character => { %>
-						<div class="card" style="width: 18rem;">
+						<div
+							class="card border-secondary character-preview"
+							style="width: 18rem;"
+						>
 							<div class="card-body">
 								<h5 class="card-title">
 									Name: <%= character.name %>
 								</h5>
 							</div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">
+							<ul class="list-group border-dark list-group-flush">
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
 									Class: <%= character.class %>
 								</li>
-								<li class="list-group-item">
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
 									Race: <%= character.race %>
 								</li>
-								<li class="list-group-item">
+								<li
+									class="list-group-item border-dark character-preview-item"
+								>
 									Creator: <%= character.user.username %>
 								</li>
 							</ul>
