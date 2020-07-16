@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/styles/main.css"
+			type="text/css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		
+		<title>Character Show Page</title>
+	</head>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+			<a class="navbar-brand" href="/">Character Buddy</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/characters"
+							>All Characters</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/characters/new"
+							>New Character</a
+						>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="/profile" class="nav-link">
+								Profile
+							</a>
+						</li>
+						<li class="nav-item">
+							<form
+								class="form-inline logout"
+								action="/logout?_method=DELETE"
+								method="POST"
+							>
+								<input
+									class="form-control mr-sm-2"
+									type="submit"
+									value="Logout"
+								/>
+							</form>
+						</li>
+					</ul>
+				</span>
+			</div>
+		</nav>
+	</header>
+	<body>
+		<main class="container body text-center character-sheet">
+		<div class="card border-secondary" style="width: 65rem;">
+			<div class="card-header mx-auto">
+				<h2 class="card-text"><%= character.name %></h2>
+
+				<!-- ===============================  row 1  ================================= -->
+
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Class:
+							</div>
+							<div class="row">
+								<%= character.class %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Race:
+							</div>
+							<div class="row">
+								<%= character.race %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Level:
+							</div>
+							<div class="row">
+								<%= character.level %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Alignment:
+							</div>
+							<div class="row">
+								<%= character.alignment %>
+							</div>
+						</h4>
+						
+					</div>
+					<!-- ===============================  Row 2  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								AC:
+							</div>
+							<div class="row">
+								<%= character.armorClass %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								HP:
+							</div>
+							<div class="row">
+								<%= character.health %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Hit Die:
+							</div>
+							<div class="row">
+								<%= character.hitDie %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Proficiency:
+							</div>
+							<div class="row">
+								<%= character.proficiencyBonus %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Speed:
+							</div>
+							<div class="row">
+								<%= character.speed %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Initiative:
+							</div>
+							<div class="row">
+								<%= character.initiative %>
+							</div>
+						</h4>
+					</div>
+				</h2>
+			</div>
+			<div class="card-body character-sheet-content mx-auto">
+				<!-- ===============================  Row 3 stats  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Str: <%= character.strength %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.strength-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Dex: <%= character.dexterity %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.dexterity-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Con: <%= character.constitution %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.constitution-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Int: <%= character.intelligence %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.intelligence-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Wis: <%= character.wisdom %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.wisdom-10)/2 %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Cha: <%= character.charisma %>
+							</div>
+							<div class="row">
+								Bonus: <%= (character.charisma-10)/2 %>
+							</div>
+						</h4>
+					</div>
+				</h2>
+				<!-- ===============================  Row 4 Money  ================================= -->
+				<h2 class="card-text">
+					<div class="row">
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Copper:
+							</div>
+							<div class="row">
+								<%= character.copper %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Silver:
+							</div>
+							<div class="row">
+								<%= character.silver %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Electrum:
+							</div>
+							<div class="row">
+								<%= character.electrum %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Gold:
+							</div>
+							<div class="row">
+								<%= character.gold %>
+							</div>
+						</h4>
+						<h4 class="col character-box-sm">
+							<div class="row">
+								Platinum:
+							</div>
+							<div class="row">
+								<%= character.platinum %>
+							</div>
+						</h4>
+					</div>
+				</h2>
+				<hr>
+				<!-- ===============================  Row 5 Items Title  ================================= -->
+				<h2 class="card-text item-title">
+					<h3>
+					Items: 
+					<span>
+						<% if (currentUser.id == character.user._id) { %>
+							<a class="btn btn btn-success btn-sm" href="/characters/<%= character._id %>/new-item">
+								+
+							</a>
+						<% } %>
+					</span>
+					</h3>
+				</h2>
+
+				<!-- ===============================  Row 6 Items List  ================================= -->
+
+				<h2 class="card-text item-list">
+					<% items.forEach(item => { %>
+						<h4 class="col item-box">
+							<div class="row">
+								<div class="col">
+									<%= item.name %> --- <%= item.weight %>(lbs)
+									<span>
+										<% if (currentUser.id == character.user._id) { %>
+											<a class="btn btn-warning btn-sm" href="/characters/<%= character._id %>/<%= item._id %>">
+												Edit
+											</a>
+											<% } %>
+									</span>
+								</div>
+							</div>
+						</h4>
+						<p>
+							
+							
+						</p>
+					<% }) %>
+				</h2>
+				
+				
+			
+
+			<ul class="list-group list-group-flush">
+
+				<!-- ===============================  Row 7 Abilities and Proficiencies  ================================= -->
+				<div class="row">
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Abilities:</h5>
+							<p><%= character.abilities %></p>
+						</li>
+					</div>
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Proficiencies:</h5>
+							<p><%= character.proficiencies %></p>
+						</li>
+					</div>
+				</div>
+				
+				<hr>
+
+				<!-- ===============================  Row 8 Traits and Languages  ================================= -->
+				<div class="row">
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Traits:</h5>
+							<p><%= character.traits %> </p>
+						</li>
+					</div>
+					<div class="col">
+						<li class="list-group-item character-about">
+							<h5>Languages:</h5>
+							<p><%= character.languages %></p>
+						</li>
+					</div>
+				</div>
+				
+				
+			</ul>
+			
+			
+			<!-- ===============================  Row 8 Edit and Delete  ================================= -->
+			<div class="container edit-delete">
+				<% if (currentUser.id == character.user._id) { %>
+					<div class="card-footer">
+						<div class="row">
+							<div class="col">
+								<a href="/characters/<%= character._id %>/edit " class="btn btn-warning mx-auto" style="width: 71px;">
+									Edit
+								</a>
+							</div>
+							<div class="col">
+								<form class="mx-auto" action="/characters/<%= character._id%>?_method=DELETE" method="POST">
+									<input class="btn btn-danger" type="submit" value="Delete" />
+								</form>
+							</div>
+						</div>
+					</div>
+				<% } %>
+			</div>	
+			
+			
+		</div>
+		</main>
+		<!-- Footer -->
+		<footer id="footer" class="page-footer font-small footer-dark bg-secondary">
+
+		<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">
+				© 2020 Copyright: Rock Williams Inc.
+			</div>
+			<!-- Copyright -->
+
+		</footer>
+		<!-- Footer -->
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/styles/main.css" type="text/css" />
+		<title>New Character</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+				<a class="navbar-brand" href="/">Character Buddy</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarText"
+					aria-controls="navbarText"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/characters"
+								>All Characters</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/characters/new"
+								>New Character</a
+							>
+						</li>
+					</ul>
+					<span class="navbar-text">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="/profile" class="nav-link">
+									Profile
+								</a>
+							</li>
+							<li class="nav-item">
+								<form
+									class="form-inline logout"
+									action="/logout?_method=DELETE"
+									method="POST"
+								>
+									<input
+										class="form-control mr-sm-2"
+										type="submit"
+										value="Logout"
+									/>
+								</form>
+							</li>
+						</ul>
+					</span>
+				</div>
+			</nav>
+		</header>
+		<main class="new-character body text-center">
+			<div class="container">
+				<div class="card">
+					<h3 class="card-header">Make A New Character!</h3>
+					<div class="card-body">
+					
+
+						<form action="/characters" class="new-character-form" method="POST">
+							<div class="row">
+								<div class="col">
+									<h4>Name:</h4> 
+									<input
+										type="text"
+										class="form-control"
+										name="name"
+										placeholder="Name"
+									/>
+									
+								</div>
+								<div class="col">
+									<h4>Class:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="class"
+										placeholder="Class"
+									/>
+								</div>
+								<div class="col">
+									<h4>Race:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="race"
+										placeholder="Race"
+									/>
+								</div>
+								<div class="col">
+									<h4>Level:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="level"
+										placeholder="Level"
+									/>
+								</div>
+								<div class="col">
+									<h4>Alignment:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="alignment"
+										placeholder="Alignment"
+									/>
+								</div>
+							</div>
+							<hr />
+
+							<div class="row">
+								<div class="col">
+									<h4>Armor Class:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="armorClass"
+										placeholder="Armor Class"
+									/>
+								</div>
+								<div class="col">
+									<h4>Total Health:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="health"
+										placeholder="Total Health"
+									/>
+								</div>
+								<div class="col">
+									<h4>Hit Die:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="hitDie"
+										placeholder="Hit Die"
+									/>
+								</div>
+								<div class="col">
+									<h4>Proficiency Bonus:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="proficiencyBonus"
+										placeholder="Proficiency Bonus"
+									/>
+								</div>
+								<div class="col">
+									<h4>Speed:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="speed"
+										placeholder="Speed"
+									/>
+								</div>
+								<div class="col">
+									<h4>Initiative:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="initiative"
+										placeholder="Initiative"
+									/>
+								</div>
+							</div>
+							<hr />
+							<div class="row">
+								<div class="col">
+									<h4>Strength:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="strength"
+										placeholder="Strength"
+									/>
+								</div>
+								<div class="col">
+									<h4>Dexterity:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="dexterity"
+										placeholder="Dexterity"
+									/>
+								</div>
+								<div class="col">
+									<h4>Constitution:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="constitution"
+										placeholder="Constitution"
+									/>
+								</div>
+								<div class="col">
+									<h4>Intelligence:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="intelligence"
+										placeholder="Intelligence"
+									/>
+								</div>
+								<div class="col">
+									<h4>Wisdom</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="wisdom"
+										placeholder="Wisdom"
+									/>
+								</div>
+								<div class="col">
+									<h4>Charisma:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="charisma"
+										placeholder="Charisma"
+									/>
+								</div>
+							</div>
+							<hr />
+							<div class="row">
+								<div class="col">
+									<h4>Copper:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="copper"
+										placeholder="Copper"
+									/>
+								</div>
+								<div class="col">
+									<h4>Silver:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="silver"
+										placeholder="Silver"
+									/>
+								</div>
+								<div class="col">
+									<h4>Electrum:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="electrum"
+										placeholder="Electrum"
+									/>
+								</div>
+								<div class="col">
+									<h4>Gold:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="gold"
+										placeholder="Gold"
+									/>
+								</div>
+								<div class="col">
+									<h4>Platinum:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="platinum"
+										placeholder="Platinum"
+									/>
+								</div>
+							</div>
+							<hr />
+							<div class="row">
+								<div class="col">
+									<h4>Abilities:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="abilities"
+										placeholder="Abilities"
+										style="height: 70px"
+									/>
+								</div>
+								<div class="col">
+									<h4>Proficiencies:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="proficiencies"
+										placeholder="Proficiencies"
+										style="height: 70px"
+									/>
+								</div>
+							</div>
+							<hr />
+							<div class="row">
+								<div class="col">
+									<h4>Traits:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="traits"
+										placeholder="Traits"
+										style="height: 70px"
+									/>
+								</div>
+								<div class="col">
+									<h4>Languages:</h4>
+									<input
+										type="text"
+										class="form-control"
+										name="languages"
+										placeholder="Languages"
+										style="height: 70px"
+									/>
+								</div>
+							</div>
+							<hr />
+							<div class="row mx-auto">
+								<input
+									id="add-character"
+									class="btn btn-success form-control mx-auto border-dark"
+									type="submit"
+									value="Add Character"
+									style="width: 200px;"
+								/>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="page-footer font-small footer-dark bg-secondary">
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">
+				© 2020 Copyright: Rock Williams Inc.
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
+	</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+	background: #19aa8d !important;
+	font-family: "Roboto", sans-serif !important;
+}
+
+.body {
+	margin: 10px;
+	font-family: "Roboto", sans-serif;
+	padding-bottom: 60px !important;
+}
+
+.card {
+	padding: 5px;
+	margin: 10px;
+	float: left;
+	background-color: rgb(229, 229, 229) !important;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+.list-group-item {
+	background-color: rgb(229, 229, 229) !important;
+}
+
+footer {
+	margin-top: 20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+}
+
+.character-sheet {
+	max-height: 950px;
+}
+
+.carousel {
+	height: 600px;
+	width: 1100px;
+}
+
+.carousel-item {
+	height: 600px;
+	border-radius: 20px;
+}
+
+.podcast-link {
+	text-decoration: none;
+	color: darkmagenta !important;
+}
+
+.home-card {
+	position: relative !important;
+	float: none !important;
+	width: 1150px;
+}
+
+.characters-display {
+	background-color: #aa3619 !important;
+}
+
+.character-preview-item {
+	border: solid 2px black;
+}
+
+.character-box-sm {
+	border: solid 2px black;
+	margin: 4px;
+}
+
+.row {
+	align-items: center;
+	justify-content: center;
+}
+
+.card-header {
+	width: 990px;
+}
+
+.character-sheet-content {
+	width: 990px;
+}
+
+.item-box{
+	border: solid 2px black;
+	position: relative;
+	padding: 5px
+}
+
+.item-list {
+	align-items: center;
+	justify-content: center;
+}
+
+.character-about{
+	border: solid 2px black !important;
+}
+
