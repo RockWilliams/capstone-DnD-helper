@@ -70,7 +70,10 @@
 
 			<p><%= characters %></p>
 			<% for( let index = 0; index < characters.length; index++ ) { %>
-			<div class="card border border-primary" style="width: 18rem;">
+			<div
+				class="card border border-primary character-preview"
+				style="width: 18rem;"
+			>
 				<div class="card-body">
 					<h5 class="card-title">
 						Name: <%= characters[index].name %>

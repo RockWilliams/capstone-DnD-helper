@@ -49,3 +49,9 @@ footer {
 	text-decoration: none;
 	color: darkmagenta !important;
 }
+
+.home-card {
+	position: relative !important;
+	float: none !important;
+	width: 1150px;
+}

@@ -67,32 +67,41 @@
 			</nav>
 		</header>
 		<main class="body">
-			<h1>
-				Player Creations:
-			</h1>
-			<% characters.forEach(character => { %>
-			<div class="card" style="width: 18rem;">
-				<div class="card-body">
-					<h5 class="card-title">Name: <%= character.name %></h5>
-				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">
-						Class: <%= character.class %>
-					</li>
-					<li class="list-group-item">Race: <%= character.race %></li>
-					<li class="list-group-item">
-						Creator: <%= character.user.username %>
-					</li>
-				</ul>
-				<div class="card-body">
-					<a
-						href="/characters/<%= character._id %>"
-						class="btn btn-primary"
-						>View Details</a
-					>
+			<!-- ===============================  All characters Card  ================================= -->
+			<div class="container">
+				<div class="card character-preview">
+					<h3 class="card-header">All Characters:</h3>
+					<div class="card-body">
+						<% characters.forEach(character => { %>
+						<div class="card" style="width: 18rem;">
+							<div class="card-body">
+								<h5 class="card-title">
+									Name: <%= character.name %>
+								</h5>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									Class: <%= character.class %>
+								</li>
+								<li class="list-group-item">
+									Race: <%= character.race %>
+								</li>
+								<li class="list-group-item">
+									Creator: <%= character.user.username %>
+								</li>
+							</ul>
+							<div class="card-body">
+								<a
+									href="/characters/<%= character._id %>"
+									class="btn btn-primary"
+									>View Details</a
+								>
+							</div>
+						</div>
+						<% }) %>
+					</div>
 				</div>
 			</div>
-			<% }) %>
 		</main>
 		<!-- Footer -->
 		<footer class="page-footer font-small footer-dark bg-secondary">
