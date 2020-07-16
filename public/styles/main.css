@@ -40,7 +40,12 @@ footer {
 	width: 1100px;
 }
 
-.carousel-item > img {
+.carousel-item {
 	height: 600px;
 	border-radius: 20px;
+}
+
+.podcast-link {
+	text-decoration: none;
+	color: darkmagenta !important;
 }
