@@ -66,30 +66,36 @@
 	</header>
 	<body>
 		<main class="body">
-			<h1>Hello <%= user.username %></h1>
-			<% characters.forEach(character => { %>
+			<h1>Hello <%= user.username %>, Here Are Your Characters:</h1>
+
+			<p><%= characters %></p>
+			<% for( let index = 0; index < characters.length; index++ ) { %>
 			<div class="card border border-primary" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">Name: <%= character.name %></h5>
+					<h5 class="card-title">
+						Name: <%= characters[index].name %>
+					</h5>
 				</div>
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item">
-						Class: <%= character.class %>
+						Class: <%= characters[index].class %>
 					</li>
-					<li class="list-group-item">Race: <%= character.race %></li>
+					<li class="list-group-item">
+						Race: <%= characters[index].race %>
+					</li>
 					<li class="list-group-item">
 						Creator: <%= user.username %>
 					</li>
 				</ul>
 				<div class="card-body">
 					<a
-						href="/characters/<%= character._id %>"
+						href="/characters/<%= characters[index]._id %>"
 						class="btn btn-primary"
 						>View Details</a
 					>
 				</div>
 			</div>
-			<% }) %>
+			<% } %>
 		</main>
 		<!-- Footer -->
 		<footer class="page-footer font-small footer-dark bg-secondary">

@@ -6,14 +6,17 @@ body {
 .body {
 	margin: 10px;
 	font-family: "Roboto", sans-serif;
+	padding-bottom: 60px !important;
 }
 
 .card {
-	border: solid 2px red;
 	padding: 5px;
 	margin: 10px;
 	float: left;
 	background-color: rgb(229, 229, 229) !important;
+	position: absolute;
+	overflow: hidden;
+	margin-bottom: 60px;
 }
 
 .list-group-item {
@@ -26,4 +29,8 @@ footer {
 	bottom: 0;
 	width: 100%;
 	color: #fff;
+}
+
+.character-sheet {
+	max-height: 950px;
 }

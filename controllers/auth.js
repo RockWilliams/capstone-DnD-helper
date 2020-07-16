@@ -79,8 +79,11 @@ router.get("/profile", async function (req, res) {
 		const foundUser = await db.User.findById(
 			req.session.currentUser.id
 		).populate("characters");
-
-		const context = { user: foundUser, characters: foundUser.characters };
+		const foundCharacters = await db.Character.find({
+			user: foundUser._id,
+		});
+		console.log(foundCharacters);
+		const context = { user: foundUser, characters: foundCharacters };
 		res.render("auth/profile", context);
 	} catch (err) {
 		console.log(err);
