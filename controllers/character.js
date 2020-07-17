@@ -62,19 +62,13 @@ router.get("/:id", function (req, res) {
 				console.log(err);
 				res.send({ message: "Internal Server error." });
 			} else {
-				const bonuses = {
-					str: Math.floor((foundCharacter.strength-10)/2),
-					dex: Math.floor((foundCharacter.dexterity-10)/2),
-					con: Math.floor((foundCharacter.constitution-10)/2),
-					int: Math.floor((foundCharacter.intelligence-10)/2),
-					wis: Math.floor((foundCharacter.wisdom-10)/2),
-					cha: Math.floor((foundCharacter.charisma-10)/2),
-				}
+				
+
 				const context = {
 					character: foundCharacter,
 					items: foundCharacter.items,
 					currentUser: req.session.currentUser,
-					bonuses: bonuses,
+					admin: "5f10e5bfe2387900246da882",
 				};
 				res.render("characters/show", context);
 			}

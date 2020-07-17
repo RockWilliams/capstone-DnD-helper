@@ -83,6 +83,8 @@ router.get("/profile", async function (req, res) {
 			user: foundUser._id,
 		});
 		console.log(foundCharacters);
+
+		
 		const context = { user: foundUser, characters: foundCharacters };
 		res.render("auth/profile", context);
 	} catch (err) {
