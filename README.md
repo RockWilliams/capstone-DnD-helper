@@ -26,7 +26,7 @@ List of Technologies Used:
 ---
 
 User Stories, <a href="https://trello.com/b/ClfHPHig/capstone-project">My Trello With User Stories and Sprints</a>: 
-<img href="public/images/UserStories.png" alt="User Stories>
+<img href="public/images/UserStories.png" alt="User Stories">
 
 ---
 
