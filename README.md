@@ -67,4 +67,5 @@ ERD:
 
 ---
 
-Unsolved Problems/ Future Features:
+Future Features:
+    * I would like to implement more detail into the character sheets, such as specific skills and their bonuses/proficiencies. I also think more Dungeons and Dragons information would be useful, including but not limited to classes and races from the book.
