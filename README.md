@@ -26,7 +26,7 @@ List of Technologies Used:
 ---
 
 User Stories, <a href="https://trello.com/b/ClfHPHig/capstone-project">My Trello With User Stories and Sprints</a>: 
-<img href="public/images/UserStories.png" alt="User Stories">
+<img src="public/images/UserStories.png" alt="User Stories">
 
 ---
 
@@ -34,36 +34,36 @@ WireFrames:
 
 Home Page:
 
-<img href="public/images/wireframes/home.JPG" alt="Home Page">
+<img src="public/images/wireframes/home.JPG" alt="Home Page">
 ---
 
 User Page:
-<img href="public/images/wireframes/user.JPG" alt="User Page">
+<img src="public/images/wireframes/user.JPG" alt="User Page">
 
 ---
 
 All Characters:
-<img href="public/images/wireframes/all-characters.JPG" alt="All Characters">
+<img src="public/images/wireframes/all-characters.JPG" alt="All Characters">
 
 ---
 
 New Character Page:
-<img href="public/images/wireframes/new.JPG" alt="New Character Page">
+<img src="public/images/wireframes/new.JPG" alt="New Character Page">
 
 ---
 
 Edit Character Page:
-<img href="public/images/wireframes/edit.JPG" alt="Edit Character Page">
+<img src="public/images/wireframes/edit.JPG" alt="Edit Character Page">
 
 ---
 
 Character Show Page
-<img href="public/images/wireframes/character-show.JPG" alt="Character Show Page">
+<img src="public/images/wireframes/character-show.JPG" alt="Character Show Page">
 
 ---
 
 ERD:
-<img href="public/images/ERD.png" alt="Entity Relationship Diagram">
+<img src="public/images/ERD.png" alt="Entity Relationship Diagram">
 
 ---
 
