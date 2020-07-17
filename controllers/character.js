@@ -62,18 +62,13 @@ router.get("/:id", function (req, res) {
 				console.log(err);
 				res.send({ message: "Internal Server error." });
 			} else {
-				let admin = false; 
-				if (req.session.currentUser._id == "5f0ce0104278fba76d189827") {
-					let admin = true;
-				} else {
-					let admin = false;
-				}
+				
 
 				const context = {
 					character: foundCharacter,
 					items: foundCharacter.items,
 					currentUser: req.session.currentUser,
-					admin: admin,
+					admin: "5f10e5bfe2387900246da882",
 				};
 				res.render("characters/show", context);
 			}
