@@ -68,4 +68,4 @@ ERD:
 ---
 
 Future Features:
-* I would like to implement more detail into the character sheets, such as specific skills and their bonuses/proficiencies. I also think more Dungeons and Dragons information would be useful, including but not limited to classes and races from the book.
+* I would like to implement more detail into the character sheets, such as specific skills and their bonuses/proficiencies. I also think more Dungeons and Dragons information would be useful, including but not limited to classes and races from the book. Another stretch goal is to implement the ability to add images to characters and profiles.
