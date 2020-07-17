@@ -176,7 +176,7 @@
 								Str: <%= character.strength %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.strength-10)/2 %>
+								Bonus: <%= Math.floor((character.strength-10)/2) %>
 							</div>
 						</h4>
 						<h4 class="col character-box-sm">
@@ -184,7 +184,7 @@
 								Dex: <%= character.dexterity %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.dexterity-10)/2 %>
+								Bonus: <%= Math.floor((character.dexterity-10)/2) %>
 							</div>
 						</h4>
 						<h4 class="col character-box-sm">
@@ -192,7 +192,7 @@
 								Con: <%= character.constitution %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.constitution-10)/2 %>
+								Bonus: <%= Math.floor((character.constitution-10)/2) %>
 							</div>
 						</h4>
 						<h4 class="col character-box-sm">
@@ -200,7 +200,7 @@
 								Int: <%= character.intelligence %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.intelligence-10)/2 %>
+								Bonus: <%= Math.floor((character.intelligence-10)/2) %>
 							</div>
 						</h4>
 						<h4 class="col character-box-sm">
@@ -208,7 +208,7 @@
 								Wis: <%= character.wisdom %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.wisdom-10)/2 %>
+								Bonus: <%= Math.floor((character.wisdom-10)/2) %>
 							</div>
 						</h4>
 						<h4 class="col character-box-sm">
@@ -216,7 +216,7 @@
 								Cha: <%= character.charisma %>
 							</div>
 							<div class="row">
-								Bonus: <%= (character.charisma-10)/2 %>
+								Bonus: <%= Math.floor((character.charisma-10)/2) %>
 							</div>
 						</h4>
 					</div>
