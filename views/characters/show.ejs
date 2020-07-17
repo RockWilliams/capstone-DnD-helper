@@ -272,7 +272,7 @@
 					<h3>
 					Items: 
 					<span>
-						<% if (currentUser.id == character.user._id || currentUser.id == "admin) { %>
+						<% if (currentUser.id == character.user._id || currentUser.id == admin) { %>
 							<a class="btn btn btn-success btn-sm" href="/characters/<%= character._id %>/new-item">
 								+
 							</a>
@@ -290,7 +290,7 @@
 								<div class="col">
 									<%= item.name %> --- <%= item.weight %>(lbs)
 									<span>
-										<% if (currentUser.id == character.user._id || currentUser.id == admin) { %>
+										<% if (currentUser.id == character.user._id || currentUser.id == "5f10e5bfe2387900246da882") { %>
 											<a class="btn btn-warning btn-sm" href="/characters/<%= character._id %>/<%= item._id %>">
 												Edit
 											</a>
@@ -351,7 +351,7 @@
 			
 			<!-- ===============================  Row 8 Edit and Delete  ================================= -->
 			<div class="container edit-delete">
-				<% if (currentUser.id == character.user._id || currentUser.id == admin) { %>
+				<% if (currentUser.id == character.user._id || currentUser.id == "5f10e5bfe2387900246da882") { %>
 					<div class="card-footer">
 						<div class="row">
 							<div class="col">
